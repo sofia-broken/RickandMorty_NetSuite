@@ -1,0 +1,120 @@
+{
+    "name": "characters",
+    "fantasyName": "Characters",
+    "vendor": "Acme",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=21.2.0",
+        "SCS": ">=21.2.0"
+    },
+    "version": "1.0.0",
+    "description": "shows characters",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/Character.Service.ss"
+            ]
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/HelloWorld/Templates/acme_hello_world_helloworld.tpl",
+                    "Modules/HelloWorld/Templates/acme_characters_collection.tpl",
+                    "Modules/HelloWorld/Templates/character_cell_view.tpl",
+                    "Modules/HelloWorld/Templates/character_collection_view_row.tpl",
+                    "Modules/HelloWorld/Templates/characters_list.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/HelloWorld/Templates/acme_hello_world_helloworld.tpl",
+                    "Modules/HelloWorld/Templates/acme_characters_collection.tpl",
+                    "Modules/HelloWorld/Templates/character_cell_view.tpl",
+                    "Modules/HelloWorld/Templates/character_collection_view_row.tpl",
+                    "Modules/HelloWorld/Templates/characters_list.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/HelloWorld/Templates/acme_hello_world_helloworld.tpl",
+                    "Modules/HelloWorld/Templates/acme_characters_collection.tpl",
+                    "Modules/HelloWorld/Templates/character_cell_view.tpl",
+                    "Modules/HelloWorld/Templates/character_collection_view_row.tpl",
+                    "Modules/HelloWorld/Templates/characters_list.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss",
+            "myaccount": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss",
+            "checkout": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss"
+        },
+        "files": [
+            "Modules/HelloWorld/Sass/_hello_world-helloworld.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/HelloWorld/JavaScript/Character.Entrypoint.js",
+            "myaccount": "Modules/HelloWorld/JavaScript/Character.Entrypoint.js",
+            "checkout": "Modules/HelloWorld/JavaScript/Character.Entrypoint.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/HelloWorld/JavaScript/Character.Entrypoint.js",
+                    "Modules/HelloWorld/JavaScript/Character.View.js",
+                    "Modules/HelloWorld/JavaScript/Character.Model.js",
+                    "Modules/HelloWorld/JavaScript/Characters.Collection.js",
+                    "Modules/HelloWorld/JavaScript/CharactersCollection.View.js",
+                    "Modules/HelloWorld/JavaScript/Character.Cell.View.js",
+                    "Modules/HelloWorld/JavaScript/Characters.List.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/HelloWorld/JavaScript/Character.Entrypoint.js",
+                    "Modules/HelloWorld/JavaScript/Character.View.js",
+                    "Modules/HelloWorld/JavaScript/Character.Model.js",
+                    "Modules/HelloWorld/JavaScript/Characters.Collection.js",
+                    "Modules/HelloWorld/JavaScript/CharactersCollection.View.js",
+                    "Modules/HelloWorld/JavaScript/Character.Cell.View.js",
+                    "Modules/HelloWorld/JavaScript/Characters.List.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/HelloWorld/JavaScript/Character.Entrypoint.js",
+                    "Modules/HelloWorld/JavaScript/Character.View.js",
+                    "Modules/HelloWorld/JavaScript/Character.Model.js",
+                    "Modules/HelloWorld/JavaScript/Characters.Collection.js",
+                    "Modules/HelloWorld/JavaScript/CharactersCollection.View.js",
+                    "Modules/HelloWorld/JavaScript/Character.Cell.View.js",
+                    "Modules/HelloWorld/JavaScript/Characters.List.View.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/HelloWorld/SuiteScript/Character.Entrypoint.js",
+        "files": [
+            "Modules/HelloWorld/SuiteScript/Character.Model.js",
+            "Modules/HelloWorld/SuiteScript/Character.ServiceController.js",
+            "Modules/HelloWorld/SuiteScript/Character.Entrypoint.js"
+        ]
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

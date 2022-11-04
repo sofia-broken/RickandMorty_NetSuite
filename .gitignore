@@ -1,0 +1,16 @@
+.DS_Store
+
+gulp/config/.nsdeploy
+gulp/config/config.json
+node_modules
+.nsdeploy
+package-lock.json
+payload.json
+DeployDistribution
+LocalDistribution
+Workspace/Extras
+tmp
+Workspace/{*EXTENSION NAME*}/manifest.json
+
+.vscode
+.eslintcache

@@ -1,0 +1,21 @@
+{
+  "generator-extension": {
+    "ext_application": {
+      "MyCoolExtension": [
+        "shopping",
+        "myaccount",
+        "checkout"
+      ],
+      "my_second_extension": [
+        "shopping",
+        "myaccount",
+        "checkout"
+      ],
+      "hello_world": [
+        "shopping",
+        "myaccount",
+        "checkout"
+      ]
+    }
+  }
+}
