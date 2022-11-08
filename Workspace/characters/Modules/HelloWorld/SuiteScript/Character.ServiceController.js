@@ -12,12 +12,13 @@ define("Character.ServiceController", [
       common: {},
     },
 
-    get: function get(id) {
-      //TODO: 1.Leer id query parameter 2.Si tengo id, buscarlo (CharacterModel.getById(id)) 3.Si no hay id, llamar al listado.
+    get: function get() {
+      var id = this.request.getParameter('id') || this.data.id
+    
       if (id) {
         return CharacterModel.getById(id);
       } else {
-        return JSON.stringify(CharacterModel.getList());
+        CharacterModel.getList();
       }
     },
   });

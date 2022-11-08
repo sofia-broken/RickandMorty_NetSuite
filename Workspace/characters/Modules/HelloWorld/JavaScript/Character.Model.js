@@ -23,7 +23,7 @@ define("Character.Model", ["SCModel", "Utils"], function(
         this.urlRoot = function() {
             return  Utils.getAbsoluteUrl(getExtensionAssetsPath('services/Character.Service.ss'))
         }
-        console.log(data)
+        
         this.set(data)
     }
 

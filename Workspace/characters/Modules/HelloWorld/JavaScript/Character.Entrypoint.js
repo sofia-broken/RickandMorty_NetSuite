@@ -19,11 +19,7 @@ define(
 			var userprofilecomponent = container.getComponent("UserProfile");
             userprofilecomponent.getUserProfile().then(function(profile) {
                 let isLoggedIn = profile.isloggedin;
-                if(isLoggedIn === false){
-                    
-                    return $.Defferred().reject()
-                    
-                } else {
+                if(isLoggedIn){
                     var PageType = container.getComponent('PageType');
 
                     PageType.registerPageType({
