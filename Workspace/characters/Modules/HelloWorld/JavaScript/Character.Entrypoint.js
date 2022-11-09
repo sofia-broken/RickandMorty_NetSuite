@@ -1,25 +1,15 @@
+define('Character.Entrypoint', ['Character.View', 'Characters.List.View'], function (
+    CharacterView,
+    CharactersListView
+) {
+    'use strict';
 
-define(
-	'Character.Entrypoint'
-,   [
-		'Character.View',
-        'Characters.List.View'
-        
-	]
-,   function (
-		CharacterView,
-        CharactersListView
-	)
-{
-	'use strict';
-
-	return  {
-		mountToApp: function mountToApp (container)
-		{
-			var userprofilecomponent = container.getComponent("UserProfile");
-            userprofilecomponent.getUserProfile().then(function(profile) {
-                let isLoggedIn = profile.isloggedin;
-                if(isLoggedIn){
+    return {
+        mountToApp: function mountToApp(container) {
+            var userprofilecomponent = container.getComponent('UserProfile');
+            userprofilecomponent.getUserProfile().then(function (profile) {
+                var isLoggedIn = profile.isloggedin;
+                if (isLoggedIn) {
                     var PageType = container.getComponent('PageType');
 
                     PageType.registerPageType({
@@ -41,9 +31,7 @@ define(
                         }
                     });
                 }
-            })
-
-			
-		}
-	};
+            });
+        }
+    };
 });

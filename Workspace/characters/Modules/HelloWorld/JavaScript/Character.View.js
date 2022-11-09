@@ -5,23 +5,25 @@ define('Character.View', [
     'acme_hello_world_helloworld.tpl',
     'underscore',
     'Utils'
-], function (PageTypeBaseView, CharacterModel, acme_hello_world_helloworld, _, Utils) {
+], function defineCharacterView(PageTypeBaseView, CharacterModel, acme_hello_world_helloworld, _, Utils) {
     'use strict';
 
     // @class Acme.hello_world.HelloWorld.View @extends Backbone.View
     return PageTypeBaseView.PageTypeBaseView.extend({
         template: acme_hello_world_helloworld,
-        initialize: function initialize(options) {},
+        initialize: function initialize() {},
         beforeShowContent: function beforeShowContent() {
-            var id = this.options.routerArguments[0];
+            var id =
+            (this.options.routerArguments &&
+                this.options.routerArguments.length &&
+                this.options.routerArguments[0]) ||
+            '';
             console.log('id', id);
-            
             // TODO: si no me pasan id o no es un numero.. muestro algun tipo de error
             this.model = new CharacterModel();
-            this.model.url = Utils.addParamsToUrl(this.model.url, { 
-                id : id
-            })
-            console.log('model', this.model);
+            this.model.url = Utils.addParamsToUrl(this.model.url, {
+                id: id
+            });
             return this.model.fetch();
         },
 
