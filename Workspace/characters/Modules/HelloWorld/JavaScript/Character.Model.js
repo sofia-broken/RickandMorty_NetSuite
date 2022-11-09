@@ -14,15 +14,13 @@ define("Character.Model", ["SCModel", "Utils"], function(
  
     function CharactersModel (data) {
 
-        // if(!id) {
+        // if(id) {
         //     throw new Error("You must provide the id")
         // }
-
+        
         SCModel.call(this);
         
-        this.urlRoot = function() {
-            return  Utils.getAbsoluteUrl(getExtensionAssetsPath('services/Character.Service.ss'))
-        }
+        this.url =  Utils.getAbsoluteUrl(getExtensionAssetsPath('services/Character.Service.ss'));
         
         this.set(data)
     }

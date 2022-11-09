@@ -14,12 +14,7 @@ define("Character.ServiceController", [
 
     get: function get() {
       var id = this.request.getParameter('id') || this.data.id
-    
-      if (id) {
-        return CharacterModel.getById(id);
-      } else {
-        CharacterModel.getList();
-      }
+      return id ? CharacterModel.getById(id) : CharacterModel.getList();
     },
   });
 });

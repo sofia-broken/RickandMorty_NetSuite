@@ -1,16 +1,18 @@
 define("Character.Model", [
+  "SC.Model",
   "underscore"
-], function (_) {
+], function (SCModel, _) {
   "use strict";
 
-  return {
-    
+  return SCModel.extend({
+    name: "Character",
+
     getById: function getById(id){
     var searchCharacter = nlapiSearchRecord(
       "customrecord_characters",
       null,
       [
-       new nlobjSearchFilter('internalid', null, null, id)
+       new nlobjSearchFilter('internalid', null, 'any', id)
       ],
       [
         new nlobjSearchColumn("custrecord_character_rickandmortycf_name"),
@@ -82,5 +84,5 @@ define("Character.Model", [
         };
       });
     },
-  };
+  });
 });

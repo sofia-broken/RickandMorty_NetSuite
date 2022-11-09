@@ -2,14 +2,15 @@
     "name": "characters",
     "fantasyName": "Characters",
     "vendor": "Acme",
+    "version": "1.0.0",
     "type": "extension",
     "target": "SCA,SCS",
     "target_version": {
         "SCA": ">=21.2.0",
         "SCS": ">=21.2.0"
     },
-    "version": "1.0.0",
     "description": "shows characters",
+    "skins": [],
     "assets": {
         "img": {
             "files": []
@@ -22,6 +23,16 @@
                 "services/Character.Service.ss"
             ]
         }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss",
+            "myaccount": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss",
+            "checkout": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss"
+        },
+        "files": [
+            "Modules/HelloWorld/Sass/_hello_world-helloworld.scss"
+        ]
     },
     "templates": {
         "application": {
@@ -53,16 +64,6 @@
                 ]
             }
         }
-    },
-    "sass": {
-        "entry_points": {
-            "shopping": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss",
-            "myaccount": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss",
-            "checkout": "Modules/HelloWorld/Sass/_hello_world-helloworld.scss"
-        },
-        "files": [
-            "Modules/HelloWorld/Sass/_hello_world-helloworld.scss"
-        ]
     },
     "javascript": {
         "entry_points": {
@@ -114,6 +115,7 @@
             "Modules/HelloWorld/SuiteScript/Character.Entrypoint.js"
         ]
     },
+    "local_folder": "Workspace/characters",
     "suitescript2": {
         "files": []
     }
