@@ -5,7 +5,7 @@ define('Character.Model', ['SC.Model', 'underscore'], function (SCModel, _) {
         name: 'Character',
 
         getById: function getById(id) {
-            var filters = [new nlobjSearchFilter('internalid', null, 'any', id)];
+            var filters = [new nlobjSearchFilter('internalid', null, 'anyof', id)];
             var columns = [
                 new nlobjSearchColumn('custrecord_character_rickandmortycf_name'),
                 new nlobjSearchColumn('custrecord_characters_rickandmortycf_spe'),
@@ -21,18 +21,18 @@ define('Character.Model', ['SC.Model', 'underscore'], function (SCModel, _) {
                 filters,
                 columns
             );
-            // var searchCharacter2 = searchCharacter[0].getValue('custrecord_character_rickandmortycf_name');
 
-            return {
-                name: searchCharacter[0].getValue('custrecord_character_rickandmortycf_name'),
-                specie: searchCharacter[0].getValue('custrecord_characters_rickandmortycf_spe'),
-                gender: searchCharacter[0].getValue('custrecord_character_rickandmortycf_gend'),
-                location: searchCharacter[0].getValue('custrecord_character_rickandmortycf_loca'),
-                origin: searchCharacter[0].getValue('custrecord_character_rickandmortycf_orig'),
-                image: searchCharacter[0].getValue('custrecord_character_rickandmorty_image')
-            };
 
-            // return searchCharacter2;
+            return _.map(searchCharacter, function mapCharacter(searchRecord) {
+                return {
+                    name: searchRecord.getValue('custrecord_character_rickandmortycf_name'),
+                    specie: searchRecord.getValue('custrecord_characters_rickandmortycf_spe'),
+                    gender: searchRecord.getValue('custrecord_character_rickandmortycf_gend'),
+                    location: searchRecord.getValue('custrecord_character_rickandmortycf_loca'),
+                    origin: searchRecord.getValue('custrecord_character_rickandmortycf_orig'),
+                    image: searchRecord.getValue('custrecord_character_rickandmorty_image')
+                };
+            });
         },
 
         getList: function getList() {

@@ -10,14 +10,10 @@ define('Character.Model', ['SCModel', 'Utils'], function defineCharacterModel(
     // @class Case.Fields.Model @extends Backbone.Model
 
     var SCModel = SCModelModule.SCModel;
-    function CharactersModel(data, id) {
-        // if(id) {
-        //     throw new Error("You must provide the id")
-        // }
+    function CharactersModel(data) {
         SCModel.call(this);
-        this.url = Utils.getAbsoluteUrl(getExtensionAssetsPath('services/Character.Service.ss' ));
+        this.url = Utils.getAbsoluteUrl(getExtensionAssetsPath('services/Character.Service.ss'));
         this.set(data);
-        console.log('url', id);
     }
 
     CharactersModel.prototype = Object.create(SCModel.prototype);

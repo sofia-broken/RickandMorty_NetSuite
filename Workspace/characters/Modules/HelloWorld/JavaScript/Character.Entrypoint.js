@@ -9,9 +9,8 @@ define('Character.Entrypoint', ['Character.View', 'Characters.List.View'], funct
             var userprofilecomponent = container.getComponent('UserProfile');
             userprofilecomponent.getUserProfile().then(function (profile) {
                 var isLoggedIn = profile.isloggedin;
+                var PageType = container.getComponent('PageType');
                 if (isLoggedIn) {
-                    var PageType = container.getComponent('PageType');
-
                     PageType.registerPageType({
                         name: 'hello_world',
                         routes: ['character/:id'],

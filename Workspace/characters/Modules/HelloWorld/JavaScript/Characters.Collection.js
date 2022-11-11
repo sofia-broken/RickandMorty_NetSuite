@@ -1,6 +1,6 @@
-define(// id
-    'Characters.Collection', // dependecies
-    ['SCCollection', 'Character.Model', 'Utils'], // function
+define(
+    'Characters.Collection',
+    ['SCCollection', 'Character.Model', 'Utils'],
     function (SCCollectionComponent, CharacterModel, Utils) {
         var SCCollection = SCCollectionComponent.SCCollection;
 
@@ -8,7 +8,6 @@ define(// id
             SCCollection.call(this, models, options);
             this.model = CharacterModel;
             this.url = Utils.getAbsoluteUrl(getExtensionAssetsPath('services/Character.Service.ss'));
-			
         }
 
         // Inherit parent instance methods.
