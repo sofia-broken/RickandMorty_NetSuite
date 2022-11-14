@@ -22,15 +22,14 @@ define('Character.View', [
             this.model.url = Utils.addParamsToUrl(this.model.url, {
                 id: id
             });
-            
             return this.model.fetch();
         },
 
         getContext: function getContext() {
             return {
-                name: this.model.get('name'),
-                specie: this.model.get('specie'),
-                gender: this.model.get('gender')
+                name: this.model.attributes[0].name,
+                specie: this.model.attributes[0].specie,
+                gender: this.model.attributes[0].gender
             };
         }
     });
