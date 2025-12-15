@@ -32,3 +32,4 @@ define('Character.Cell.View', ['SCView', 'Character.Model', 'character_cell_view
     return CellView;
 });
 //test comment
+//test comment 2
