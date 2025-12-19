@@ -34,4 +34,5 @@ define('Character.Cell.View', ['SCView', 'Character.Model', 'character_cell_view
 //test comment
 //test comment 2
 //test comment 3
-//test comment 4 5
+//test comment 4 5 6
+// test merge 
